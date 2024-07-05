@@ -1,7 +1,11 @@
 package handlers
 
-import "github.com/gin-gonic/gin"
+import (
+	"net/http"
+
+	"github.com/gin-gonic/gin"
+)
 
 func HomeHandler(ctx *gin.Context) {
-	ctx.String("Hello world")
+	ctx.String(http.StatusOK, "Hello world")
 }

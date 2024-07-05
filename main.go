@@ -2,6 +2,7 @@ package main
 
 import (
 	"GoMvcPattern/app"
+	"GoMvcPattern/routes"
 	"fmt"
 	"os"
 
@@ -21,6 +22,7 @@ func main() {
 	}
 
 	r := gin.Default()
+	routes.WebRoutes(r)
 
 	r.Run(":4000")
 }
